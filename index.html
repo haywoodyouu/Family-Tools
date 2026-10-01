@@ -3,447 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Check-in</title>
+<title>Our schedule</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Check-in">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFPElEQVR4nO3dMXLbSBCFYdjlSJGPoUPpDHuBjTdx6DPoUAr3CBspXQeoQrFsNUQC6O73Zv4vXa00mPk5Q4Iy9eX/f38swEe+dg8AuogDIeJAiDgQIg6EiAMh4kCIOBAiDoSIAyHiQIg4ECIOhIgDIeJAiDgQIg6EiAMh4kCIOBAiDoSIAyHiQIg4ECIOhL51D6DZ+9tr9J+enl8qRyJo0jh2mvjza6atZK447mli5/+arZKJnnMcK+Pa7+Blip3jwkVdv9UkW4h9HJ8+o8x4uL+/vW59DPyU9ovp53N47fCmlZjtHF5NbEyf0jo9ITUt45bXJXjsHF5zus/oKa3BzjFSGRuLi1KPw2ISj9G/NOk49KfvJPEL1I1DfOKuonyZonEoT9nlZC9WNA4oUIxD9pGUR/OS5eLQnKYCghcuFwd0EAdCWnEIbq2V1C5fKw5I9SH0xpvUvDTSeX+/Pw6aiNz+vlmL5mOFMva9v702TlFbHL2X7aVronriIItHtcxYQxyUcUz9vFXHQRlnFM9eaRyUcV7lHNbFQRl2uEPqp+xhVnQTTHbb+Ofnf/tf8Pdf3yvG8aCa+2MVcaiV8WkQ0RdrhpKn//Z5mYea2P8Ok1RS8Q+p23eO81l8qD2R7JMlfefoLSMpi9tv3p5InpFfraSWUfxTWqQfKy07R8uCtWwhqSdL7s4xTxmNPzfPaMdK7woN1sdQcSisjcIYrjJOHDqrojOSkwaJQ2091MZzzAhxaK6E5qgeYh+H8hooj+0e9nEgj3cc+g/N1BFmv7eSG0fq6PXLWLmM80/eO8fksm9Au94+93o45o02tY/EONp/jWMSefNseax4bRsrxzFnxcG2USlptlPioIx6GXPud6w47s8ru5H7xYEy18fBmdLl8pln50DILA67Y/s3XuO/OA7OlF7Xzr/ZzoFKxIEQcSBEHAgRB0LEgRBxIEQcCF0cR/tfgZjctfNvtnO4f4yO1/jN4kCl6+PgZOly+cyzcyDkF4fXsX3LbuQpcXCy1MuY86ydgz4qJc2237GyGO7Pi+eYE+Ng86iRN8+uH8Hg9UDMG63xh9QilfeHt6T+vrHL5pE3Tu/P58im34f+CHd4x4FU9nEoPzSVx3YP+zgW1TXQHNVDRohj0VsJtfEcM0gci9J66IzkpHHiWDRWRWEMVxkqjqV7bUYqY/G9fb6ja4Xqf679nw5tsa5T2YdhDLZhbEY7Vm7VrNmoZSz8ReozerMoOLLHPFZ+c/kpM/BucWuKOFbbih6uZJImNhXHyiJwskQ+DUUziJqXgUVxLMJ92Cm7QTDyqxWcVBcHv298icppLN056OOk4gmsPlbo47D6qWt4zkEfB7RMWs8TUvp4SNd0td0EWy+Y17f7eh9FzS9l2UJ2tE9O/+3zbQrYRVbtTWyEboI9Pb/ozEsXqRkQimMlNTvF1K5dLg7oIA6EFONQ211rCF61YhyL5Eyl0rxe0TigQDcOzQdTBtkr1Y1jEZ61Cylfo3Qci/bcnSd+depxLPIzeJj+dRnEsTjM46Msrqj/jbc7DfMWv0UWK4+dY2M0sx/yGr/NzrFxfIvfq4mNXxybeyp5en5JbWj/+5s2san7F2+NkvpwX/tPmT3nOCZjFYcvY7E+Vh5y4YudGbJYTbFzbM6v6zxlLPPsHJtjL3amamIzXRybO1/sVA1H0bxxbCYvYMdczznwEOJAiDgQIg6EiAMh4kCIOBAiDoSIAyHiQIg4ECIOhIgDIeJAiDgQIg6EiAMh4kCIOBAiDoSIAyHiQIg4ECIOhH4BYVGpXDXiWtQAAAAASUVORK5CYII=">
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFPElEQVR4nO3dMXLbSBCFYdjlSJGPoUPpDHuBjTdx6DPoUAr3CBspXQeoQrFsNUQC6O73Zv4vXa00mPk5Q4Iy9eX/f38swEe+dg8AuogDIeJAiDgQIg6EiAMh4kCIOBAiDoSIAyHiQIg4ECIOhIgDIeJAiDgQIg6EiAMh4kCIOBAiDoSIAyHiQIg4ECIOhL51D6DZ+9tr9J+enl8qRyJo0jh2mvjza6atZK447mli5/+arZKJnnMcK+Pa7+Blip3jwkVdv9UkW4h9HJ8+o8x4uL+/vW59DPyU9ovp53N47fCmlZjtHF5NbEyf0jo9ITUt45bXJXjsHF5zus/oKa3BzjFSGRuLi1KPw2ISj9G/NOk49KfvJPEL1I1DfOKuonyZonEoT9nlZC9WNA4oUIxD9pGUR/OS5eLQnKYCghcuFwd0EAdCWnEIbq2V1C5fKw5I9SH0xpvUvDTSeX+/Pw6aiNz+vlmL5mOFMva9v702TlFbHL2X7aVronriIItHtcxYQxyUcUz9vFXHQRlnFM9eaRyUcV7lHNbFQRl2uEPqp+xhVnQTTHbb+Ofnf/tf8Pdf3yvG8aCa+2MVcaiV8WkQ0RdrhpKn//Z5mYea2P8Ok1RS8Q+p23eO81l8qD2R7JMlfefoLSMpi9tv3p5InpFfraSWUfxTWqQfKy07R8uCtWwhqSdL7s4xTxmNPzfPaMdK7woN1sdQcSisjcIYrjJOHDqrojOSkwaJQ2091MZzzAhxaK6E5qgeYh+H8hooj+0e9nEgj3cc+g/N1BFmv7eSG0fq6PXLWLmM80/eO8fksm9Au94+93o45o02tY/EONp/jWMSefNseax4bRsrxzFnxcG2USlptlPioIx6GXPud6w47s8ru5H7xYEy18fBmdLl8pln50DILA67Y/s3XuO/OA7OlF7Xzr/ZzoFKxIEQcSBEHAgRB0LEgRBxIEQcCF0cR/tfgZjctfNvtnO4f4yO1/jN4kCl6+PgZOly+cyzcyDkF4fXsX3LbuQpcXCy1MuY86ydgz4qJc2237GyGO7Pi+eYE+Ng86iRN8+uH8Hg9UDMG63xh9QilfeHt6T+vrHL5pE3Tu/P58im34f+CHd4x4FU9nEoPzSVx3YP+zgW1TXQHNVDRohj0VsJtfEcM0gci9J66IzkpHHiWDRWRWEMVxkqjqV7bUYqY/G9fb6ja4Xqf679nw5tsa5T2YdhDLZhbEY7Vm7VrNmoZSz8ReozerMoOLLHPFZ+c/kpM/BucWuKOFbbih6uZJImNhXHyiJwskQ+DUUziJqXgUVxLMJ92Cm7QTDyqxWcVBcHv298icppLN056OOk4gmsPlbo47D6qWt4zkEfB7RMWs8TUvp4SNd0td0EWy+Y17f7eh9FzS9l2UJ2tE9O/+3zbQrYRVbtTWyEboI9Pb/ozEsXqRkQimMlNTvF1K5dLg7oIA6EFONQ211rCF61YhyL5Eyl0rxe0TigQDcOzQdTBtkr1Y1jEZ61Cylfo3Qci/bcnSd+depxLPIzeJj+dRnEsTjM46Msrqj/jbc7DfMWv0UWK4+dY2M0sx/yGr/NzrFxfIvfq4mNXxybeyp5en5JbWj/+5s2san7F2+NkvpwX/tPmT3nOCZjFYcvY7E+Vh5y4YudGbJYTbFzbM6v6zxlLPPsHJtjL3amamIzXRybO1/sVA1H0bxxbCYvYMdczznwEOJAiDgQIg6EiAMh4kCIOBAiDoSIAyHiQIg4ECIOhIgDIeJAiDgQIg6EiAMh4kCIOBAiDoSIAyHiQIg4ECIOhH4BYVGpXDXiWtQAAAAASUVORK5CYII=">
-
+<meta name="apple-mobile-web-app-title" content="Schedule">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#F3F7FB; --card:#FFFFFF; --ink:#24304A; --soft:#5E6B85; --line:#DCE3EC;
-  --sky:#D7E8FF; --mint:#CDEFE3; --sun:#FFE08A; --lilac:#E6DCFB; --peach:#FFE1D2;
-  --accent:#3B6BDB; --accent-ink:#FFFFFF; --sel:#24304A; --sel-ink:#FFFFFF;
+  --h:#FFD9C7; --h-ink:#7A2E12; --h-strong:#E5784A;
+  --g:#CDEFE3; --g-ink:#0D5340; --g-strong:#2EA57E;
+  --sel:#24304A; --sel-ink:#FFFFFF;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#141A26; --card:#1D2536; --ink:#E8EDF7; --soft:#A3AECA; --line:#2E3A52;
-    --sky:#22385C; --mint:#1E4A3E; --sun:#5A4A1C; --lilac:#3A3060; --peach:#5A3628;
-    --accent:#7FA2F5; --accent-ink:#0F1522; --sel:#E8EDF7; --sel-ink:#141A26;
+    --h:#5A3020; --h-ink:#FFD9C7; --h-strong:#F0956D;
+    --g:#1C4A3D; --g-ink:#CDEFE3; --g-strong:#5DCAA5;
+    --sel:#E8EDF7; --sel-ink:#141A26;
   }
 }
 :root[data-theme="dark"]{
   --bg:#141A26; --card:#1D2536; --ink:#E8EDF7; --soft:#A3AECA; --line:#2E3A52;
-  --sky:#22385C; --mint:#1E4A3E; --sun:#5A4A1C; --lilac:#3A3060; --peach:#5A3628;
-  --accent:#7FA2F5; --accent-ink:#0F1522; --sel:#E8EDF7; --sel-ink:#141A26;
+  --h:#5A3020; --h-ink:#FFD9C7; --h-strong:#F0956D;
+  --g:#1C4A3D; --g-ink:#CDEFE3; --g-strong:#5DCAA5;
+  --sel:#E8EDF7; --sel-ink:#141A26;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.45}
-button{font:inherit;color:inherit;cursor:pointer}
-button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button,a{font:inherit;color:inherit}
+button{cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid var(--sel);outline-offset:2px}
 .wrap{max-width:640px;margin:0 auto;padding:16px 16px 48px}
-h1,h2,.kidq{font-family:Fredoka,Nunito,system-ui,sans-serif;font-weight:600;letter-spacing:.2px}
-h1{font-size:30px;margin:8px 0 4px}
-h2{font-size:22px;margin:20px 0 10px}
-.muted{color:var(--soft)}
-.small{font-size:14px}
-.hidden{display:none!important}
-
-/* Home */
-.home{min-height:80vh;display:flex;flex-direction:column;justify-content:center;gap:18px}
-.door{display:flex;align-items:center;gap:18px;border:0;border-radius:28px;padding:26px 22px;text-align:left;background:var(--sky)}
-.door.kid{background:var(--sun)}
-.door .big{font-size:52px;line-height:1}
-.door b{display:block;font-family:Fredoka,Nunito,sans-serif;font-size:26px;font-weight:600}
-.syncnote{font-size:13px;color:var(--soft);text-align:center}
-
-/* Kid */
-.kidtop{display:flex;justify-content:space-between;align-items:center}
-.ghost{background:none;border:0;color:var(--soft);font-size:15px;padding:8px 4px}
-.kidq{font-size:28px;margin:18px 0 14px;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.tile{border:3px solid transparent;border-radius:24px;padding:16px 8px;background:var(--card);display:flex;flex-direction:column;align-items:center;gap:4px;font-weight:700;font-size:18px;min-height:112px;justify-content:center}
-.tile .e{font-size:44px;line-height:1.1}
-.tile[aria-pressed="true"]{border-color:var(--sel);background:var(--mint)}
-.tile.wide{grid-column:span 2;min-height:84px;flex-direction:row;gap:12px}
-.go{display:block;width:100%;margin-top:18px;border:0;border-radius:22px;padding:18px;font-size:21px;font-weight:800;background:var(--accent);color:var(--accent-ink)}
-.go:disabled{opacity:.4}
-.dots{display:flex;justify-content:center;gap:8px;margin-top:6px}
-.dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
-.dots i.on{background:var(--accent)}
-textarea,input[type=text],input[type=number],input[type=time],input[type=date],input[type=datetime-local],input[type=password]{width:100%;font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px}
-textarea{min-height:110px;resize:vertical}
-.done{text-align:center;padding-top:30px}
-.done .e{font-size:84px}
-.stickers{font-size:28px;letter-spacing:4px;margin:12px 0;word-break:break-all}
-
-/* Parent */
-.bar{display:flex;gap:6px;overflow-x:auto;margin:6px 0 10px;padding-bottom:4px}
-.tab{border:2px solid var(--line);background:var(--card);border-radius:999px;padding:8px 16px;font-weight:700;white-space:nowrap}
+h1,h2,.big{font-family:Fredoka,Nunito,system-ui,sans-serif;font-weight:600}
+h2{font-size:22px;margin:22px 0 10px}
+.muted{color:var(--soft)}.small{font-size:14px}
+.tabs{display:flex;gap:6px;margin:4px 0 14px}
+.tab{border:2px solid var(--line);background:var(--card);border-radius:999px;padding:8px 16px;font-weight:700}
 .tab[aria-selected="true"]{background:var(--sel);color:var(--sel-ink);border-color:var(--sel)}
-details{background:var(--card);border-radius:18px;margin:10px 0;border:1px solid var(--line)}
-summary{list-style:none;padding:14px 16px;font-weight:800;display:flex;justify-content:space-between;cursor:pointer}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-weight:800;color:var(--soft)}
-details[open] summary::after{content:"–"}
-.sec{padding:0 16px 16px}
-.lab{font-weight:700;font-size:15px;margin:12px 0 6px;display:block}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:2px solid var(--line);background:var(--bg);border-radius:999px;padding:7px 13px;font-size:15px;font-weight:600}
-.chip[aria-pressed="true"]{background:var(--sel);color:var(--sel-ink);border-color:var(--sel)}
-.scale{display:flex;gap:6px}
-.scale button{flex:1;border:2px solid var(--line);background:var(--bg);border-radius:12px;padding:10px 0;font-weight:800}
-.scale button[aria-pressed="true"]{background:var(--sel);color:var(--sel-ink);border-color:var(--sel)}
-.scaleends{display:flex;justify-content:space-between;font-size:13px;color:var(--soft);margin-top:3px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.stepper{display:flex;align-items:center;gap:12px}
-.stepper button{width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:var(--bg);font-size:22px;font-weight:800}
-.stepper output{font-size:22px;font-weight:800;min-width:2ch;text-align:center}
-.save{position:sticky;bottom:calc(10px + env(safe-area-inset-bottom,0px));margin-top:16px}
-
-.day{margin:18px 0 6px;font-weight:800}
-.entry{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin:8px 0}
-.entry .head{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.badge{font-size:12px;font-weight:800;border-radius:999px;padding:3px 9px;background:var(--lilac)}
-.badge.kid{background:var(--sun)}
-.entry p{margin:6px 0 0;font-size:15px}
-.del{background:none;border:0;color:var(--soft);font-size:14px;padding:4px}
-
+.tonight{border-radius:28px;padding:26px 22px;text-align:center}
+.tonight.H{background:var(--h);color:var(--h-ink)}.tonight.G{background:var(--g);color:var(--g-ink)}
+.tonight .e{font-size:64px;line-height:1}
+.tonight .big{font-size:32px;margin:8px 0 2px}
+.tonight p{margin:6px 0 0;font-size:18px}
+.visit{margin-top:12px;background:var(--card);border-radius:18px;padding:14px 16px;border:1px solid var(--line);font-weight:700}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:10px}
+.wd{border-radius:14px;padding:8px 2px;text-align:center;font-size:13px;font-weight:700}
+.wd .n{font-size:20px;font-family:Fredoka,Nunito,sans-serif}
+.wd.H{background:var(--h);color:var(--h-ink)}.wd.G{background:var(--g);color:var(--g-ink)}
+.wd.today{outline:3px solid var(--sel);outline-offset:1px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--soft);margin:8px 0}
+.sw{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px}
+.sw.H{background:var(--h-strong)}.sw.G{background:var(--g-strong)}
+.mhead{display:flex;justify-content:space-between;align-items:center;margin:8px 0}
+.mhead button{border:2px solid var(--line);background:var(--card);border-radius:12px;width:44px;height:40px;font-size:20px;font-weight:800}
+.mhead b{font-family:Fredoka,Nunito,sans-serif;font-size:21px;font-weight:600}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.dh{font-size:12px;color:var(--soft);text-align:center;font-weight:700}
+.c{min-height:58px;border-radius:10px;padding:4px 5px;font-size:13px;font-weight:700;border:1px solid var(--line);background:var(--card)}
+.c.H{background:var(--h);color:var(--h-ink);border-color:transparent}.c.G{background:var(--g);color:var(--g-ink);border-color:transparent}
+.c.today{outline:3px solid var(--sel);outline-offset:1px}
+.c small{display:block;font-size:11px;font-weight:600;line-height:1.2;margin-top:2px}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin:12px 0}
-.chart{overflow-x:auto}
-.chart svg{display:block;width:100%;height:auto;min-width:320px}
-.legend{display:flex;gap:16px;font-size:14px;color:var(--soft);margin-top:6px}
-.legend span::before{content:"";display:inline-block;width:12px;height:4px;border-radius:2px;margin-right:6px;vertical-align:middle;background:var(--c)}
-.tally{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:15px}
-.tally:last-child{border-bottom:0}
-.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-.btn{border:2px solid var(--line);background:var(--card);border-radius:14px;padding:10px 16px;font-weight:700}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(24px + env(safe-area-inset-bottom,0px));background:var(--sel);color:var(--sel-ink);padding:10px 18px;border-radius:999px;font-weight:700;z-index:9}
-.pin{max-width:320px;margin:20vh auto 0;text-align:center}
-.pin input{text-align:center;font-size:28px;letter-spacing:10px}
-@media (prefers-reduced-motion:no-preference){.done .e{animation:pop .5s ease-out}@keyframes pop{0%{transform:scale(.4)}70%{transform:scale(1.15)}100%{transform:scale(1)}}}
+.panel h3{margin:0 0 6px;font-size:17px}
+.panel ul{margin:6px 0 0;padding-left:20px}
+.btn{display:inline-block;border:2px solid var(--sel);background:var(--sel);color:var(--sel-ink);border-radius:14px;padding:10px 16px;font-weight:700;text-decoration:none}
+code{word-break:break-all;font-size:13px}
 </style>
 </head>
 <body>
-<div class="wrap" id="app"></div>
-<div class="toast hidden" id="toast" role="status"></div>
-
+<div class="wrap">
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="kids" aria-selected="true">Tonight</button>
+    <button class="tab" role="tab" data-tab="cal" aria-selected="false">Calendar</button>
+    <button class="tab" role="tab" data-tab="plan" aria-selected="false">The plan</button>
+  </div>
+  <div id="view"></div>
+</div>
 <script>
-/* ---------- Options ---------- */
-const FEELINGS=[["😊","Happy"],["😌","Calm"],["😐","Okay"],["😟","Worried"],["😢","Sad"],["😤","Frustrated"],["😴","Tired"],["🙉","Too much"]];
-const HELPED=[["🌬️","Breathing"],["🤗","A hug"],["🎨","Drawing"],["📚","Reading"],["🏃","Moving"],["🛋️","Quiet spot"],["💬","Talking"],["🎵","Music"],["🧸","Stuffy or pet"],["✨","Nothing yet"]];
-const STICKERS=["⭐","🌈","🦄","🐢","🌻","🚀","🐙","🍉","🦋","🎈","🐳","🍀"];
-const SYMPTOMS=["Tummy","Headache","Nausea","Chest tight","Dizzy","Shaky","Tired","Hot or cold","Throat","Other"];
-const MEALS=["Breakfast","Lunch","Dinner","Snacks"];
-const WORRIES=["Death","Shots or doctor","Getting hurt","Being clumsy","Getting sick","School","Rules or fairness","Friends","Other"];
-const SLEEPFLAGS=["Night episode (confused or panicked)","Nightmare","Came to our bed","Hard to settle"];
-const COPING=["Breathing","Hug or comfort","Movement","Drawing or reading","Quiet space","Talking it through","Distraction","Worry time"];
-const SPACE=["Supportive statement","Answered once, then held","Held an accommodation","Gave information (not reassurance)"];
-const SCHOOL=["Attended","Partial day","Missed","No school"];
+/* ===== Schedule rules: edit here ===== */
+const HOMES={H:{name:"Haywood home",emoji:"🏡"},G:{name:"Goodwin home",emoji:"🏠"}};
+const START=new Date(2026,10,16), P2=new Date(2026,11,14), P3=new Date(2027,0,18), P4=new Date(2027,1,15);
+/* Exceptions: "YYYY-MM-DD": "H" or "G" sets that night's home (for holidays). */
+const OVERRIDES={};
 
-/* ---------- Storage (this device only) ---------- */
-let entries=[], settings={pin:"1234"};
-const LS="checkin-v1";
-function lsLoad(){try{const v=JSON.parse(localStorage.getItem(LS)||"null");if(v){entries=v.entries||[];settings=Object.assign(settings,v.settings||{});}}catch(e){}}
-function lsSave(){try{localStorage.setItem(LS,JSON.stringify({entries,settings}));return true}catch(e){toast("Couldn't save. Storage may be full or blocked.");return false}}
-lsLoad();
-async function saveEntry(e){
-  if(!e.id) e.id="e"+Date.now()+Math.random().toString(36).slice(2,6);
-  const i=entries.findIndex(x=>x.id===e.id); if(i>=0)entries[i]=e;else entries.push(e);
-  lsSave();
+function phase(d){return d<P2?1:d<P3?2:d<P4?3:4}
+function key(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function dayInfo(d){
+  d=new Date(d.getFullYear(),d.getMonth(),d.getDate());
+  if(d<START) return null;
+  const w=d.getDay(), p=phase(d); let night="G", visit=null;
+  if(p===1){ if(w===6)night="H"; if(w===1||w===4)visit="4:00–7:15pm"; if(w===0)visit="11:00am–7:15pm"; }
+  if(p===2){ if(w===6||w===4)night="H"; if(w===1)visit="4:00–7:15pm"; if(w===0)visit="11:00am–7:15pm"; }
+  if(p===3){ if(w===3||w===4||w===6)night="H"; if(w===0)visit="11:00am–7:15pm"; }
+  if(p===4){ if(w===3||w===4)night="H"; const wk=Math.floor(Math.round((d-P4)/864e5)/7); if((w===5||w===6||w===0)&&wk%2===0)night="H"; }
+  if(OVERRIDES[key(d)]) night=OVERRIDES[key(d)];
+  return {night,visit,phase:p};
 }
-async function removeEntry(id){entries=entries.filter(x=>x.id!==id);lsSave()}
-async function saveSettings(){lsSave()}
-function downloadText(name,text,type){const blob=new Blob([text],{type:type||"text/plain"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500)}
 
-/* ---------- Helpers ---------- */
 const $=s=>document.querySelector(s);
-const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function toast(t){const el=$("#toast");el.textContent=t;el.classList.remove("hidden");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.add("hidden"),2200)}
-function dayKey(ts){const d=new Date(ts);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
-function fmtDay(k){const [y,m,d]=k.split("-").map(Number);return new Date(y,m-1,d).toLocaleDateString(undefined,{weekday:"long",month:"short",day:"numeric"})}
-function fmtTime(ts){return new Date(ts).toLocaleTimeString(undefined,{hour:"numeric",minute:"2-digit"})}
-function partOfDay(){const h=new Date().getHours();return h<11?"morning":h<16?"after school":"bedtime"}
-function localInput(ts){const d=new Date(ts);d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,16)}
+let tab="kids", month=null;
+function addDays(d,n){const x=new Date(d);x.setDate(x.getDate()+n);return x}
 
-let view="home", parentTab="log", kidState=null, draft=null, unlocked=false;
-function refresh(){ if(view==="parent" && parentTab!=="log") render(); }
-function go(v){view=v;render();window.scrollTo(0,0)}
-
-/* ---------- Render root ---------- */
-function render(){
-  const app=$("#app");
-  if(view==="home") app.innerHTML=homeHTML();
-  else if(view==="kid") app.innerHTML=kidHTML();
-  else if(view==="pin") app.innerHTML=pinHTML();
-  else if(view==="parent") app.innerHTML=parentHTML();
-  bind();
-}
-
-function homeHTML(){
-  return `<div class="home">
-    <h1>Check-in</h1>
-    <button class="door kid" data-act="kid"><span class="big">🌻</span><span><b>Me</b><span>Tap to check in</span></span></button>
-    <button class="door" data-act="parent"><span class="big">🗒️</span><span><b>Grown-up</b><span>Log, patterns, and summaries</span></span></button>
-    <p class="syncnote">Saved on this device.</p>
-  </div>`;
-}
-
-/* ---------- Kid ---------- */
-function newKid(){kidState={step:0,feeling:null,body:null,helped:[],worry:""}}
-function kidHTML(){
-  const s=kidState, dots=`<div class="dots">${[0,1,2,3].map(i=>`<i class="${i<=s.step?"on":""}"></i>`).join("")}</div>`;
-  const top=`<div class="kidtop"><button class="ghost" data-act="home">‹ Back</button>${s.step<4?dots:""}<span style="width:50px"></span></div>`;
-  if(s.step===0) return top+`<div class="kidq">How do you feel this ${partOfDay()}?</div>
-    <div class="grid">${FEELINGS.map(([e,l])=>`<button class="tile" data-feel="${l}" aria-pressed="${s.feeling===l}"><span class="e">${e}</span>${l}</button>`).join("")}</div>
-    <button class="go" data-act="next" ${s.feeling?"":"disabled"}>Next</button>`;
-  if(s.step===1) return top+`<div class="kidq">My body feels…</div>
-    <div class="grid">
-      <button class="tile wide" data-body="Okay" aria-pressed="${s.body==="Okay"}"><span class="e">👍</span>Okay</button>
-      <button class="tile wide" data-body="Not great" aria-pressed="${s.body==="Not great"}"><span class="e">🤏</span>Not great</button>
-    </div>
-    <button class="go" data-act="next" ${s.body?"":"disabled"}>Next</button>`;
-  if(s.step===2) return top+`<div class="kidq">What helped today?</div>
-    <div class="grid">${HELPED.map(([e,l])=>`<button class="tile" data-help="${l}" aria-pressed="${s.helped.includes(l)}"><span class="e">${e}</span>${l}</button>`).join("")}</div>
-    <button class="go" data-act="next">Next</button>`;
-  if(s.step===3) return top+`<div class="kidq">Worry box</div>
-    <p class="muted" style="text-align:center">If a worry is bugging you, you can put it in the box. It'll wait here for worry time.</p>
-    <textarea id="worry" placeholder="Type a worry, or skip">${esc(s.worry)}</textarea>
-    <button class="go" data-act="kidsave">${s.worry?"Put it in the box and finish":"Finish"}</button>`;
-  const n=entries.filter(e=>e.kind==="kid").length;
-  const row=Array.from({length:Math.min(n,24)},(_,i)=>STICKERS[i%STICKERS.length]).join("");
-  return `<div class="done"><div class="e">${STICKERS[(n-1+STICKERS.length)%STICKERS.length]}</div>
-    <h1>Thanks for checking in</h1>
-    <p class="muted">${s.worry?"Your worry is in the box. You don't have to carry it right now.":"You can come back anytime."}</p>
-    <div class="stickers" aria-label="${n} check-ins">${row}</div>
-    <p class="muted small">${n} check-in${n===1?"":"s"} so far</p>
-    <button class="go" data-act="home">All done</button></div>`;
-}
-
-/* ---------- PIN ---------- */
-function pinHTML(){
-  return `<div class="pin"><h2>Grown-up code</h2>
-    <input type="password" inputmode="numeric" id="pinin" maxlength="8" autocomplete="off" aria-label="Code">
-    <p class="muted small" id="pinmsg">${settings.pin==="1234"?"The starting code is 1234. You can change it in Settings.":""}</p>
-    <button class="go" data-act="pinok">Open</button>
-    <button class="ghost" data-act="home" style="margin-top:8px">Cancel</button></div>`;
-}
-
-/* ---------- Parent ---------- */
-function newDraft(){return{kind:"parent",ts:Date.now(),mood:null,anxiety:null,symptoms:[],symIntensity:null,symDuration:"",gi:"",appetite:null,meals:[],bedtime:"",fallAsleep:"",wakings:0,sleepFlags:[],wakeTime:"",worries:[],trigger:"",reassurance:0,school:null,nurse:false,sensory:false,active:"",screensBed:false,coping:[],copingHelped:null,space:[],meds:"",notes:""}}
-function chips(field,opts){return `<div class="chips">${opts.map(o=>`<button class="chip" data-chip="${field}" data-val="${esc(o)}" aria-pressed="${(draft[field]||[]).includes(o)}">${esc(o)}</button>`).join("")}</div>`}
-function one(field,opts){return `<div class="chips">${opts.map(o=>`<button class="chip" data-one="${field}" data-val="${esc(o)}" aria-pressed="${draft[field]===o}">${esc(o)}</button>`).join("")}</div>`}
-function tog(field,label){return `<button class="chip" data-tog="${field}" aria-pressed="${!!draft[field]}">${esc(label)}</button>`}
-function scale(field,lo,hi){return `<div class="scale">${[1,2,3,4,5].map(n=>`<button data-scale="${field}" data-val="${n}" aria-pressed="${draft[field]===n}">${n}</button>`).join("")}</div><div class="scaleends"><span>${lo}</span><span>${hi}</span></div>`}
-function step(field){return `<div class="stepper"><button data-step="${field}" data-d="-1" aria-label="Less">−</button><output>${draft[field]||0}</output><button data-step="${field}" data-d="1" aria-label="More">+</button></div>`}
-function txt(field,ph,type="text"){return `<input type="${type}" data-txt="${field}" value="${esc(draft[field])}" placeholder="${esc(ph)}">`}
-
-function parentHTML(){
-  const tabs=[["log","Log"],["timeline","Timeline"],["patterns","Patterns"],["summary","Summary"],["settings","Settings"]];
-  return `<div class="kidtop"><button class="ghost" data-act="lock">‹ Done</button><span class="muted small">This device</span></div>
-    <div class="bar" role="tablist">${tabs.map(([k,l])=>`<button class="tab" role="tab" data-tab="${k}" aria-selected="${parentTab===k}">${l}</button>`).join("")}</div>
-    ${parentTab==="log"?logHTML():parentTab==="timeline"?timelineHTML():parentTab==="patterns"?patternsHTML():parentTab==="summary"?summaryHTML():settingsHTML()}`;
-}
-
-function logHTML(){
-  if(!draft) draft=newDraft();
-  return `<label class="lab">When</label><input type="datetime-local" id="when" value="${localInput(draft.ts)}">
-  <p class="muted small">Every field is optional. Fill in what you noticed.</p>
-  <details open><summary>Mood and worry</summary><div class="sec">
-    <span class="lab">Mood</span>${scale("mood","Low","Great")}
-    <span class="lab">Anxiety</span>${scale("anxiety","Calm","Very high")}
-    <span class="lab">Worry topics</span>${chips("worries",WORRIES)}
-    <span class="lab">Trigger or context</span>${txt("trigger","What was happening?")}
-    <span class="lab">Reassurance questions</span>${step("reassurance")}
-  </div></details>
-  <details><summary>Body</summary><div class="sec">
-    <span class="lab">Symptoms</span>${chips("symptoms",SYMPTOMS)}
-    <span class="lab">Intensity</span>${scale("symIntensity","Mild","Strong")}
-    <span class="lab">How long</span>${txt("symDuration","e.g. 20 minutes, all morning")}
-    <span class="lab">Bathroom or tummy notes</span>${txt("gi","Optional")}
-  </div></details>
-  <details><summary>Eating</summary><div class="sec">
-    <span class="lab">Appetite</span>${scale("appetite","Very little","Normal")}
-    <span class="lab">Meals eaten</span>${chips("meals",MEALS)}
-  </div></details>
-  <details><summary>Sleep (last night)</summary><div class="sec">
-    <div class="row2"><div><span class="lab">Bedtime</span>${txt("bedtime","","time")}</div><div><span class="lab">Woke up</span>${txt("wakeTime","","time")}</div></div>
-    <span class="lab">Minutes to fall asleep</span>${txt("fallAsleep","e.g. 30","number")}
-    <span class="lab">Night wakings</span>${step("wakings")}
-    <span class="lab">Notes</span>${chips("sleepFlags",SLEEPFLAGS)}
-  </div></details>
-  <details><summary>Day</summary><div class="sec">
-    <span class="lab">School</span>${one("school",SCHOOL)}
-    <span class="lab">Also</span><div class="chips">${tog("nurse","Nurse visit")}${tog("sensory","Sensory overload")}${tog("screensBed","Screens before bed")}</div>
-    <span class="lab">Active or outdoor minutes</span>${txt("active","e.g. 45","number")}
-  </div></details>
-  <details><summary>Coping and SPACE</summary><div class="sec">
-    <span class="lab">Coping used</span>${chips("coping",COPING)}
-    <span class="lab">Did it help?</span>${scale("copingHelped","Not really","A lot")}
-    <span class="lab">My responses</span>${chips("space",SPACE)}
-  </div></details>
-  <details><summary>Meds and notes</summary><div class="sec">
-    <span class="lab">Meds and timing</span>${txt("meds","Name and time, if any")}
-    <span class="lab">Notes</span><textarea data-txt="notes" placeholder="Anything else">${esc(draft.notes)}</textarea>
-  </div></details>
-  <button class="go save" data-act="psave">Save entry</button>`;
-}
-
-function describe(e){
-  if(e.kind==="kid"){
-    const bits=[`Felt ${e.feeling?.toLowerCase()}`,`body ${e.body?.toLowerCase()}`];
-    if(e.helped?.length) bits.push("helped: "+e.helped.join(", ").toLowerCase());
-    let s=esc(bits.join(" · "));
-    if(e.worry) s+=`<br><span class="muted">Worry box: ${esc(e.worry)}</span>`;
-    return s;
+function kidsHTML(){
+  const now=new Date(), t=dayInfo(now);
+  if(!t){
+    const days=Math.ceil((START-new Date(now.getFullYear(),now.getMonth(),now.getDate()))/864e5);
+    return `<div class="tonight G"><div class="e">📅</div><div class="big">New schedule soon</div><p>It starts in ${days} day${days===1?"":"s"}, on ${START.toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"})}.</p></div>`;
   }
-  const b=[];
-  if(e.mood) b.push("Mood "+e.mood+"/5");
-  if(e.anxiety) b.push("Anxiety "+e.anxiety+"/5");
-  if(e.worries?.length) b.push("Worries: "+e.worries.join(", "));
-  if(e.reassurance) b.push("Reassurance ×"+e.reassurance);
-  if(e.symptoms?.length) b.push("Body: "+e.symptoms.join(", ")+(e.symIntensity?` (${e.symIntensity}/5)`:"")+(e.symDuration?`, ${e.symDuration}`:""));
-  if(e.gi) b.push("GI: "+e.gi);
-  if(e.appetite) b.push("Appetite "+e.appetite+"/5");
-  if(e.meals?.length) b.push("Ate: "+e.meals.join(", "));
-  if(e.bedtime||e.wakeTime) b.push(`Sleep ${e.bedtime||"?"}–${e.wakeTime||"?"}`);
-  if(e.fallAsleep) b.push(e.fallAsleep+" min to fall asleep");
-  if(e.wakings) b.push(e.wakings+" waking"+(e.wakings>1?"s":""));
-  if(e.sleepFlags?.length) b.push(e.sleepFlags.join(", "));
-  if(e.school) b.push("School: "+e.school);
-  if(e.nurse) b.push("Nurse visit");
-  if(e.sensory) b.push("Sensory overload");
-  if(e.screensBed) b.push("Screens before bed");
-  if(e.active) b.push(e.active+" min active");
-  if(e.coping?.length) b.push("Coping: "+e.coping.join(", ")+(e.copingHelped?` (helped ${e.copingHelped}/5)`:""));
-  if(e.space?.length) b.push("My responses: "+e.space.join(", "));
-  if(e.meds) b.push("Meds: "+e.meds);
-  if(e.trigger) b.push("Context: "+e.trigger);
-  if(e.notes) b.push("Notes: "+e.notes);
-  return esc(b.join(" · ")||"No details");
+  const home=HOMES[t.night]; let n=0;
+  while(n<60){const x=dayInfo(addDays(now,n+1)); if(!x||x.night!==t.night)break; n++;}
+  const other=HOMES[t.night==="H"?"G":"H"];
+  const count=n===0?`Tomorrow night: ${other.name}`:`${n+1} sleeps here, then ${other.name}`;
+  let visit="";
+  if(t.night==="G"&&t.visit) visit=`<div class="visit">${HOMES.H.emoji} Visit at Haywood home today, ${t.visit}</div>`;
+  let week=`<div class="week">`;
+  for(let i=0;i<7;i++){const d=addDays(now,i),x=dayInfo(d);if(!x){week+=`<div class="wd" style="background:var(--card)"><div>${d.toLocaleDateString(undefined,{weekday:"short"})}</div><div class="n">${d.getDate()}</div></div>`;continue}
+    week+=`<div class="wd ${x.night} ${i===0?"today":""}"><div>${d.toLocaleDateString(undefined,{weekday:"short"})}</div><div class="n">${d.getDate()}</div><div>${HOMES[x.night].emoji}</div></div>`}
+  week+=`</div>`;
+  return `<div class="tonight ${t.night}"><div class="e">${home.emoji}</div><p>Tonight I'm sleeping at</p><div class="big">${home.name}</div><p>${count}</p></div>${visit}
+  <h2>This week</h2>${week}
+  <div class="legend"><span><span class="sw H"></span>${HOMES.H.name}</span><span><span class="sw G"></span>${HOMES.G.name}</span></div>`;
 }
 
-function timelineHTML(){
-  if(!entries.length) return `<div class="panel"><p>No entries yet. Add one from Log, or have her check in from the Me screen.</p></div>`;
-  const sorted=[...entries].sort((a,b)=>b.ts-a.ts); let out="", last="";
-  sorted.forEach(e=>{const k=dayKey(e.ts);if(k!==last){out+=`<div class="day">${fmtDay(k)}</div>`;last=k;}
-    out+=`<div class="entry"><div class="head"><span><span class="badge ${e.kind==="kid"?"kid":""}">${e.kind==="kid"?"Her check-in":"Grown-up log"}</span> <span class="muted small">${fmtTime(e.ts)}</span></span><button class="del" data-del="${e.id}">Delete</button></div><p>${describe(e)}</p></div>`;});
-  return out;
+function calHTML(){
+  if(!month){const n=new Date();month=n<START?new Date(START.getFullYear(),START.getMonth(),1):new Date(n.getFullYear(),n.getMonth(),1)}
+  const y=month.getFullYear(),m=month.getMonth(),first=new Date(y,m,1),days=new Date(y,m+1,0).getDate(),today=key(new Date());
+  let g=`<div class="mhead"><button data-m="-1" aria-label="Previous month">‹</button><b>${first.toLocaleDateString(undefined,{month:"long",year:"numeric"})}</b><button data-m="1" aria-label="Next month">›</button></div>
+  <div class="legend"><span><span class="sw H"></span>Night at ${HOMES.H.name}</span><span><span class="sw G"></span>Night at ${HOMES.G.name}</span></div><div class="cal">`;
+  ["S","M","T","W","T","F","S"].forEach(x=>g+=`<div class="dh">${x}</div>`);
+  for(let i=0;i<first.getDay();i++)g+=`<div></div>`;
+  for(let d=1;d<=days;d++){const dt=new Date(y,m,d),x=dayInfo(dt);
+    if(!x){g+=`<div class="c muted">${d}</div>`;continue}
+    const starts=[START,P2,P3,P4].some(s=>+s===+dt)?`<small>Phase ${x.phase} starts</small>`:"";
+    const v=x.visit&&x.night==="G"?`<small>Haywood ${x.visit.replace(":00","").replace(":00","")}</small>`:"";
+    g+=`<div class="c ${x.night} ${key(dt)===today?"today":""}">${d}${starts}${v}</div>`;}
+  return g+`</div>`;
 }
 
-function lastDays(n){const out=[];const d=new Date();d.setHours(0,0,0,0);for(let i=n-1;i>=0;i--){const x=new Date(d);x.setDate(d.getDate()-i);out.push(dayKey(x))}return out}
-function lineChart(days,series){
-  const W=600,H=200,P=28, xs=i=>P+i*(W-2*P)/(days.length-1), ys=v=>H-P-(v-1)*(H-2*P)/4;
-  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Mood and anxiety by day">`;
-  for(let v=1;v<=5;v++) g+=`<line x1="${P}" x2="${W-P}" y1="${ys(v)}" y2="${ys(v)}" stroke="var(--line)"/><text x="6" y="${ys(v)+4}" font-size="11" fill="var(--soft)">${v}</text>`;
-  days.forEach((k,i)=>{if(i%2===0){const [y,m,d]=k.split("-");g+=`<text x="${xs(i)}" y="${H-6}" font-size="11" text-anchor="middle" fill="var(--soft)">${+m}/${+d}</text>`}});
-  series.forEach(s=>{let path="",pen=false;s.vals.forEach((v,i)=>{if(v==null){pen=false;return}path+=(pen?"L":"M")+xs(i)+" "+ys(v)+" ";pen=true;g+=`<circle cx="${xs(i)}" cy="${ys(v)}" r="4" fill="${s.c}"/>`});g+=`<path d="${path}" fill="none" stroke="${s.c}" stroke-width="3" stroke-linejoin="round"/>`});
-  return g+`</svg>`;
-}
-function barChart(days,vals,color,label){
-  const W=600,H=150,P=28,max=Math.max(1,...vals),bw=(W-2*P)/days.length;
-  let g=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${label}">`;
-  vals.forEach((v,i)=>{const h=(H-2*P)*v/max;g+=`<rect x="${P+i*bw+3}" y="${H-P-h}" width="${bw-6}" height="${h}" rx="4" fill="${color}"/>`;if(v)g+=`<text x="${P+i*bw+bw/2}" y="${H-P-h-4}" font-size="11" text-anchor="middle" fill="var(--soft)">${v}</text>`;if(i%2===0){const [y,m,d]=days[i].split("-");g+=`<text x="${P+i*bw+bw/2}" y="${H-8}" font-size="11" text-anchor="middle" fill="var(--soft)">${+m}/${+d}</text>`}});
-  return g+`</svg>`;
-}
-function patternsHTML(){
-  const days=lastDays(14), by={}; days.forEach(k=>by[k]=[]);
-  entries.forEach(e=>{const k=dayKey(e.ts);if(by[k])by[k].push(e)});
-  const avg=(arr,f)=>{const v=arr.map(e=>e[f]).filter(x=>typeof x==="number");return v.length?v.reduce((a,b)=>a+b,0)/v.length:null};
-  const mood=days.map(k=>avg(by[k],"mood")), anx=days.map(k=>avg(by[k],"anxiety"));
-  const reas=days.map(k=>by[k].reduce((a,e)=>a+(e.reassurance||0),0));
-  const wak=days.map(k=>by[k].reduce((a,e)=>a+(e.wakings||0),0));
-  const recent=entries.filter(e=>days.includes(dayKey(e.ts)));
-  const count=(list,f)=>{const c={};list.forEach(e=>(e[f]||[]).forEach(x=>c[x]=(c[x]||0)+1));return Object.entries(c).sort((a,b)=>b[1]-a[1])};
-  const feel={};recent.filter(e=>e.kind==="kid").forEach(e=>feel[e.feeling]=(feel[e.feeling]||0)+1);
-  const tallies=(rows,empty)=>rows.length?rows.map(([k,v])=>`<div class="tally"><span>${esc(k)}</span><b>${v}</b></div>`).join(""):`<p class="muted small">${empty}</p>`;
-  const episodes=recent.filter(e=>(e.sleepFlags||[]).some(f=>f.startsWith("Night episode"))).length;
-  return `<p class="muted small">Last 14 days</p>
-  <div class="panel"><b>Mood and anxiety</b><div class="chart">${lineChart(days,[{vals:mood,c:"#3FB28A"},{vals:anx,c:"#E0805A"}])}</div>
-    <div class="legend"><span style="--c:#3FB28A">Mood</span><span style="--c:#E0805A">Anxiety</span></div></div>
-  <div class="panel"><b>Reassurance questions</b><div class="chart">${barChart(days,reas,"#8C7BE0","Reassurance questions by day")}</div></div>
-  <div class="panel"><b>Night wakings</b><div class="chart">${barChart(days,wak,"#5B8DEF","Night wakings by day")}</div>
-    <p class="small muted">Night episodes logged: ${episodes}</p></div>
-  <div class="panel"><b>Worry topics</b>${tallies(count(recent,"worries"),"None logged yet.")}</div>
-  <div class="panel"><b>Body symptoms</b>${tallies(count(recent,"symptoms"),"None logged yet.")}</div>
-  <div class="panel"><b>Her check-ins</b>${tallies(Object.entries(feel).sort((a,b)=>b[1]-a[1]),"No check-ins yet.")}</div>
-  <div class="panel"><b>What helped (her picks)</b>${tallies(count(recent.filter(e=>e.kind==="kid"),"helped"),"No picks yet.")}</div>`;
+function planHTML(){
+  const f=d=>d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
+  const feed=new URL("schedule.ics",location.href).href;
+  return `<div class="panel"><h3>Phase 1 · starts ${f(START)}</h3>One overnight at Haywood.<ul><li>Monday and Thursday visits, 4:00–7:15pm</li><li>Saturday night overnight</li><li>Sunday until 7:15pm</li></ul></div>
+  <div class="panel"><h3>Phase 2 · starts ${f(P2)}</h3>Two overnights at Haywood.<ul><li>Monday visit, 4:00–7:15pm</li><li>Thursday overnight, back to Goodwin Friday at 4pm</li><li>Saturday overnight, Sunday until 7:15pm</li></ul></div>
+  <div class="panel"><h3>Phase 3 · starts ${f(P3)}</h3>Three overnights at Haywood. Monday visits end.<ul><li>Wednesday and Thursday overnights, back to Goodwin Friday at 4pm</li><li>Saturday overnight, Sunday until 7:15pm</li></ul></div>
+  <div class="panel"><h3>Phase 4 · starts ${f(P4)}</h3>Ongoing schedule.<ul><li>Haywood: every Wednesday and Thursday night</li><li>Haywood every other weekend: Wednesday 4pm through Monday 4pm</li><li>Goodwin: every Monday and Tuesday night, plus the other weekends from Friday at 4pm</li></ul></div>
+  <div class="panel"><h3>Handoffs</h3>Weekday handoffs happen at 4pm after school. Holidays and school breaks aren't included yet.</div>
+  <div class="panel"><h3>Add to your calendar</h3><p class="small muted">In Google Calendar, use Other calendars → From URL and paste this address. Skylight shows it once it syncs.</p><code>${feed}</code><p><a class="btn" href="schedule.ics" download>Download calendar file</a></p></div>`;
 }
 
-let sumFrom=null,sumTo=null;
-function summaryText(){
-  const f=new Date(sumFrom+"T00:00").getTime(), t=new Date(sumTo+"T23:59:59").getTime();
-  const list=entries.filter(e=>e.ts>=f&&e.ts<=t).sort((a,b)=>a.ts-b.ts);
-  if(!list.length) return "No entries in this range.";
-  const nums=(fl)=>list.map(e=>e[fl]).filter(x=>typeof x==="number");
-  const mean=a=>a.length?(a.reduce((x,y)=>x+y,0)/a.length).toFixed(1):"–";
-  const cnt=(fl,src=list)=>{const c={};src.forEach(e=>(e[fl]||[]).forEach(x=>c[x]=(c[x]||0)+1));return Object.entries(c).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${k} (${v})`).join(", ")||"none logged"};
-  const kid=list.filter(e=>e.kind==="kid"), feel={};kid.forEach(e=>feel[e.feeling]=(feel[e.feeling]||0)+1);
-  let s=`Check-in summary: ${fmtDay(sumFrom)} to ${fmtDay(sumTo)}\n\n`;
-  s+=`Average mood: ${mean(nums("mood"))}/5   Average anxiety: ${mean(nums("anxiety"))}/5\n`;
-  s+=`Reassurance questions: ${list.reduce((a,e)=>a+(e.reassurance||0),0)} total\n`;
-  s+=`Night wakings: ${list.reduce((a,e)=>a+(e.wakings||0),0)} total\n`;
-  s+=`Sleep notes: ${cnt("sleepFlags")}\n`;
-  s+=`Worry topics: ${cnt("worries")}\n`;
-  s+=`Body symptoms: ${cnt("symptoms")}\n`;
-  s+=`Missed or partial school days: ${list.filter(e=>e.school==="Missed"||e.school==="Partial day").length}\n`;
-  s+=`Her check-ins: ${kid.length} (${Object.entries(feel).map(([k,v])=>`${k} ${v}`).join(", ")||"none"})\n\n`;
-  s+=`Daily detail\n`;
-  let last="";
-  list.forEach(e=>{const k=dayKey(e.ts);if(k!==last){s+=`\n${fmtDay(k)}\n`;last=k;}
-    s+=`  ${fmtTime(e.ts)} ${e.kind==="kid"?"[her check-in]":"[log]"} ${describe(e).replace(/<br>/g," ").replace(/<[^>]+>/g,"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;/g,"'")}\n`;});
-  return s;
+function render(){
+  $("#view").innerHTML=tab==="kids"?kidsHTML():tab==="cal"?calHTML():planHTML();
+  document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===tab));
+  document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{month=new Date(month.getFullYear(),month.getMonth()+(+b.dataset.m),1);render()});
 }
-function summaryHTML(){
-  if(!sumTo){const d=new Date();sumTo=dayKey(d);d.setDate(d.getDate()-13);sumFrom=dayKey(d);}
-  return `<div class="row2"><div><span class="lab">From</span><input type="date" id="sf" value="${sumFrom}"></div><div><span class="lab">To</span><input type="date" id="st" value="${sumTo}"></div></div>
-  <span class="lab">Summary to share with her doctor or therapist</span>
-  <textarea id="sumtext" style="min-height:320px;font-size:14px" readonly>${esc(summaryText())}</textarea>
-  <div class="btnrow"><button class="btn primary" data-act="copy">Copy</button><button class="btn" data-act="savefile">Save as file</button></div>`;
-}
-function settingsHTML(){
-  return `<div class="panel"><b>Grown-up code</b><p class="muted small">Keeps the grown-up side separate from her check-ins.</p>
-    <input type="password" inputmode="numeric" id="newpin" maxlength="8" placeholder="New code">
-    <div class="btnrow"><button class="btn primary" data-act="setpin">Save code</button></div></div>
-  <div class="panel"><b>Backup</b><p class="small">Entries live only on this device. Save a backup now and then, or to move entries to another device.</p>
-    <div class="btnrow"><button class="btn primary" data-act="backup">Save backup</button><button class="btn" data-act="restore">Restore backup</button></div>
-    <input type="file" id="restorefile" accept=".json,application/json" class="hidden"></div>`;
-}
-
-/* ---------- Events ---------- */
-function bind(){
-  document.querySelectorAll("[data-act]").forEach(b=>b.onclick=()=>act(b.dataset.act));
-  document.querySelectorAll("[data-feel]").forEach(b=>b.onclick=()=>{kidState.feeling=b.dataset.feel;render()});
-  document.querySelectorAll("[data-body]").forEach(b=>b.onclick=()=>{kidState.body=b.dataset.body;render()});
-  document.querySelectorAll("[data-help]").forEach(b=>b.onclick=()=>{const v=b.dataset.help,a=kidState.helped;const i=a.indexOf(v);i>=0?a.splice(i,1):a.push(v);b.setAttribute("aria-pressed",i<0)});
-  const w=$("#worry"); if(w) w.oninput=()=>{kidState.worry=w.value;const g=document.querySelector('[data-act="kidsave"]');g.textContent=w.value.trim()?"Put it in the box and finish":"Finish"};
-  document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{parentTab=b.dataset.tab;render()});
-  document.querySelectorAll("[data-chip]").forEach(b=>b.onclick=()=>{const f=b.dataset.chip,v=b.dataset.val,a=draft[f];const i=a.indexOf(v);i>=0?a.splice(i,1):a.push(v);b.setAttribute("aria-pressed",i<0)});
-  document.querySelectorAll("[data-one]").forEach(b=>b.onclick=()=>{const f=b.dataset.one;draft[f]=draft[f]===b.dataset.val?null:b.dataset.val;document.querySelectorAll(`[data-one="${f}"]`).forEach(x=>x.setAttribute("aria-pressed",draft[f]===x.dataset.val))});
-  document.querySelectorAll("[data-tog]").forEach(b=>b.onclick=()=>{const f=b.dataset.tog;draft[f]=!draft[f];b.setAttribute("aria-pressed",draft[f])});
-  document.querySelectorAll("[data-scale]").forEach(b=>b.onclick=()=>{const f=b.dataset.scale,v=+b.dataset.val;draft[f]=draft[f]===v?null:v;document.querySelectorAll(`[data-scale="${f}"]`).forEach(x=>x.setAttribute("aria-pressed",draft[f]===+x.dataset.val))});
-  document.querySelectorAll("[data-step]").forEach(b=>b.onclick=()=>{const f=b.dataset.step;draft[f]=Math.max(0,(draft[f]||0)+(+b.dataset.d));b.parentElement.querySelector("output").textContent=draft[f]});
-  document.querySelectorAll("[data-txt]").forEach(i=>i.oninput=()=>{draft[i.dataset.txt]=i.value});
-  const wh=$("#when"); if(wh) wh.onchange=()=>{const t=new Date(wh.value).getTime();if(!isNaN(t))draft.ts=t};
-  document.querySelectorAll("[data-del]").forEach(b=>b.onclick=async()=>{if(confirm("Delete this entry?")){await removeEntry(b.dataset.del);render()}});
-  const sf=$("#sf"),st=$("#st"); if(sf){sf.onchange=()=>{sumFrom=sf.value;render()};st.onchange=()=>{sumTo=st.value;render()}}
-  const pi=$("#pinin"); if(pi){pi.focus();pi.onkeydown=e=>{if(e.key==="Enter")act("pinok")}}
-}
-async function act(a){
-  if(a==="home") return go("home");
-  if(a==="kid"){newKid();return go("kid")}
-  if(a==="parent"){ if(unlocked){return go("parent")} return go("pin")}
-  if(a==="pinok"){const v=$("#pinin").value; if(v===String(settings.pin)){unlocked=true;parentTab="log";return go("parent")} $("#pinmsg").textContent="That code didn't match. Try again."; $("#pinin").value=""; return}
-  if(a==="lock"){unlocked=false;return go("home")}
-  if(a==="next"){kidState.step++;return render()}
-  if(a==="kidsave"){const s=kidState;await saveEntry({kind:"kid",ts:Date.now(),feeling:s.feeling,body:s.body,helped:[...s.helped],worry:s.worry.trim()});s.step=4;return render()}
-  if(a==="psave"){await saveEntry(draft);draft=newDraft();toast("Entry saved");render();return window.scrollTo(0,0)}
-  if(a==="copy"){const t=$("#sumtext");try{await navigator.clipboard.writeText(t.value);toast("Copied")}catch(e){t.select();toast("Selected. Use Copy from the menu.")}return}
-  if(a==="savefile"){downloadText(`check-in-summary-${sumFrom}-to-${sumTo}.txt`,summaryText());return}
-  if(a==="backup"){downloadText(`check-in-backup-${dayKey(Date.now())}.json`,JSON.stringify({entries,settings},null,1),"application/json");return}
-  if(a==="restore"){const f=$("#restorefile");f.onchange=async()=>{const file=f.files[0];if(!file)return;try{const v=JSON.parse(await file.text());if(!Array.isArray(v.entries))throw 0;const ids=new Set(entries.map(e=>e.id));let n=0;v.entries.forEach(e=>{if(e&&e.id&&!ids.has(e.id)){entries.push(e);n++}});lsSave();toast(`Added ${n} entr${n===1?"y":"ies"}`);render()}catch(e){toast("That file isn't a check-in backup")}};f.click();return}
-  if(a==="setpin"){const v=$("#newpin").value.trim();if(v.length<4){toast("Use at least 4 digits");return}settings.pin=v;await saveSettings();$("#newpin").value="";toast("Code saved");return}
-}
-
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{tab=b.dataset.tab;render()});
 render();
 </script>
 </body>
